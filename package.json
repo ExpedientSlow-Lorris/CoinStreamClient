@@ -4,7 +4,7 @@
   "description": "Frontend and static file server for Coin Stream app",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo 'hello'"
   },
   "repository": {
     "type": "git",
