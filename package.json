@@ -1,0 +1,19 @@
+{
+  "name": "coinstreamclient",
+  "version": "0.0.1",
+  "description": "Frontend and static file server for Coin Stream app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'hello'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExpedientSlow-Lorris/CoinStreamClient.git"
+  },
+  "author": "Expedient Slow-Loris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ExpedientSlow-Lorris/CoinStreamClient/issues"
+  },
+  "homepage": "https://github.com/ExpedientSlow-Lorris/CoinStreamClient#readme"
+}
