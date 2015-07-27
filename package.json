@@ -4,7 +4,8 @@
   "description": "Frontend and static file server for Coin Stream app",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'hello'"
+    "test": "echo 'hello'",
+    "start": "webpack watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/ExpedientSlow-Lorris/CoinStreamClient/issues"
   },
-  "homepage": "https://github.com/ExpedientSlow-Lorris/CoinStreamClient#readme"
+  "homepage": "https://github.com/ExpedientSlow-Lorris/CoinStreamClient#readme",
+  "devDependencies": {
+    "babel-core": "^5.8.5",
+    "babel-loader": "^5.3.2",
+    "webpack": "^1.10.5"
+  },
+  "dependencies": {
+    "express": "^4.13.1"
+  }
 }
