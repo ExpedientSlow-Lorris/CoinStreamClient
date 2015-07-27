@@ -4,8 +4,8 @@ machine:
 
 dependencies:
   override:
-    - docker build -t expedientLoris/coinstreamclient .
+    - docker build -t circleci/coinstreamclient .
 
 test:
   override:
-    - docker run -d -p 49160:8080 expedientLoris/coinstreamclient
+    - docker run -d -p 49160:8080 circleci/coinstreamclient
