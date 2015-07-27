@@ -1,0 +1,11 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker build -t expedientLoris/coinstreamclient
+
+test:
+  override:
+    - docker run -d -p 49160:8080 expedientLoris/coinstreamclient
