@@ -8,4 +8,4 @@ dependencies:
 
 test:
   override:
-    - docker run circleci/coinstreamclient bundle exec npm test
+    - docker run circleci/coinstreamclient npm test
