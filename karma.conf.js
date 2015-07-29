@@ -1,26 +1,25 @@
 // Karma configuration
-// Generated on Mon Jul 27 2015 18:25:47 GMT-0700 (PDT)
-var webpack = require('webpack');
+// Generated on Tue Jul 28 2015 19:04:27 GMT-0700 (PDT)
+
 module.exports = function(config) {
   config.set({
-    plugins: [
-      require('karma-webpack'),
-      require('karma-tap'),
-      require('karma-chrome-launcher'),
-      require('karma-phantomjs-launcher'),
-      require('karma-coverage')
-    ],
+
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['tap'],
+    frameworks: ['jasmine'],
 
 
     // list of files / patterns to load in the browser
-    files: [ 'test/**/*.js' ],
+    files: [
+      './index.js',
+      'public/js/*.js',
+      'test/**/*.js',
+      'public/js/**/*.js'
+    ],
 
 
     // list of files to exclude
@@ -31,38 +30,14 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/**/*.js': [ 'webpack' ]
     },
 
-    webpack: {
-      node: {
-        fs: 'empty'
-      }
-    },
 
-    module: {
-      postLoaders: [{
-        test: /\.js$/,
-        exclude: /(test|node_modules)\//,
-        loader: 'istanbul-instrumenter'
-      }]
-    },
-
-    webpackMiddleware: {
-      noInfo: true
-    },
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: [
-      'dots',
-      'coverage'
-    ],
+    reporters: ['progress'],
 
-    coverageReporter: {
-      type: 'text',
-      dir: 'coverage/'
-    },
 
     // web server port
     port: 9876,
@@ -78,7 +53,7 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
 
     // start these browsers
