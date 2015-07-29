@@ -4,11 +4,7 @@ machine:
 
 dependencies:
   override:
-    - npm install
-    - docker build -t circleci/coinstreamclient . :
-      environment:
-        PHANTOMJS_BIN: /usr/local/bin/phantomjs
-
+    - docker build -t circleci/coinstreamclient .
 test:
   override:
     -  docker run circleci/coinstreamclient npm test /src
