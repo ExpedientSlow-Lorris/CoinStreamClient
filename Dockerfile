@@ -7,7 +7,7 @@ RUN     yum install -y npm tar bzip2
 RUN     yum install -y fontconfig freetype freetype-devel fontconfig-devel libstdc++ wget
 RUN     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
 RUN     mkdir -p /opt/phantomjs
-RUN     tar -xjvf ~/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2 --strip-components 1 /opt/phantomjs/
+RUN     tar -xjvf ./phantomjs-1.9.8-linux-x86_64.tar.bz2 --strip-components 1 /opt/phantomjs/
 RUN     ln -s /opt/phantomjs/bin/phantomjs /usr/bin/phantomjs
 
 # Bundle app source
