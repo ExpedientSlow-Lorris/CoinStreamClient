@@ -8,4 +8,6 @@ dependencies:
 
 test:
   override:
-    - docker run circleci/coinstreamclient npm test
+    - sudo lxc-attach -n "$(docker inspect --format '{{.Id}}' circleci/coinstreamclient)" -- bash -c npm test /src
+
+      # docker run circleci/coinstreamclient npm test

@@ -13,5 +13,5 @@ RUN cd /src; npm install;
 
 EXPOSE 8080
 
-cmd ["npm", "test", "/src"]
+# cmd ["npm", "test", "/src"]
 cmd ["node", "/src/index.js"]
