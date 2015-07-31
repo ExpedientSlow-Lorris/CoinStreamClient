@@ -20,9 +20,7 @@ RUN     export PHANTOMJS_BIN=phantomjs/phantomjs
 COPY . /src
 
 # Install app dependencies
-RUN cd /src; npm install -g npm@latest; npm install;
-# RUN ./phantomjs
-RUN  npm test;
+RUN cd /src; npm install -g npm@latest; npm install; npm test;
 
 EXPOSE 8080
 
