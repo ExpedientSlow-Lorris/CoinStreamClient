@@ -9,7 +9,7 @@ RUN     cd /usr/bin
 RUN     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
 RUN     tar jxf phantomjs-1.9.8-linux-x86_64.tar.bz2
 RUN     ln -s phantomjs-1.9.8-linux-x86_64/bin phantomjs
-RUN     export PHANTOMJS_BIN=phantomjs
+RUN     export PHANTOMJS_BIN=phantomjs/phantomjs
 
 # RUN     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
 # RUN     mkdir -p /opt/phantomjs
@@ -20,7 +20,9 @@ RUN     export PHANTOMJS_BIN=phantomjs
 COPY . /src
 
 # Install app dependencies
-RUN cd /src; npm install -g npm@latest; npm install; npm test;
+RUN cd /src; npm install -g npm@latest; npm install;
+# RUN ./phantomjs
+# RUN  npm test;
 
 EXPOSE 8080
 
