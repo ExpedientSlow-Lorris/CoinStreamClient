@@ -9,6 +9,7 @@ RUN     cd /usr/bin
 RUN     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
 RUN     tar jxf phantomjs-1.9.8-linux-x86_64.tar.bz2
 RUN     ln -s phantomjs-1.9.8-linux-x86_64/bin phantomjs
+RUN     export PHANTOMJS_BIN=phantomjs
 
 # RUN     wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
 # RUN     mkdir -p /opt/phantomjs
