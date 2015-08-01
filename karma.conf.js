@@ -60,11 +60,11 @@ module.exports = function(config) {
     browsers: ['PhantomJS'],
 
     plugins: [
-      'karma-jasmine',
-      'karma-phantomjs-launcher',
-      'karma-webpack',
-      'karma-sourcemap-loader',
-      'karma-coverage'
+      require('karma-jasmine'),
+      require("karma-webpack"),
+      require('karma-phantomjs-launcher'),
+      require('karma-sourcemap-loader'),
+      require('karma-coverage')
     ],
 
     // Continuous Integration mode
