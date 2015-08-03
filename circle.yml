@@ -5,7 +5,6 @@ machine:
 dependencies:
   override:
     - docker build -t circleci/coinstreamclient .
-
 test:
   override:
-    -  docker run circleci/coinstreamclient npm test /src
+    -  docker run circleci/coinstreamclient /bin/bash

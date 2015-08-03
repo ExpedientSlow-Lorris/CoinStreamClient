@@ -14,12 +14,7 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
-    files: [
-      './index.js',
-      'public/js/*.js',
-      'test/**/*.js',
-      'public/js/**/*.js'
-    ],
+    files: ['tests.webpack.js'],
 
 
     // list of files to exclude
@@ -30,13 +25,17 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'tests.webpack.js': ['webpack', 'sourcemap', 'coverage']
     },
 
-
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
+    },
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
     // web server port
@@ -58,11 +57,18 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
+    plugins: [
+      require('karma-jasmine'),
+      require("karma-webpack"),
+      require('karma-phantomjs-launcher'),
+      require('karma-sourcemap-loader'),
+      require('karma-coverage')
+    ],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   })
 }
